@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.lexindasoft.lexindaframe.dao.AdminRoleDao">  
+
+	<select id="getRole" parameterType="int" resultType="AdminRole">  
+        select role_id roleId,
+        	   role_name roleName,
+        	   user_description userDescription,
+        	   list_order listOrder,
+        	   user_disabled userDisabled,
+        	   role_modules roleModules,
+        	   role_columns roleColumns
+        from admin_role 
+        where role_id = #{roleId}  
+    </select>
+    <update id="updateUser" parameterType="Admin">
+		update admin_role set user_name=#{userName},user_password=#{userPassword},role_id=#{roleId},lastlogin_ip=#{lastloginIp},
+		 lastlogin_time=#{lastloginTime},user_email=#{userEmail},real_name=#{realName},user_status=#{userStatus}, store_id=#{storeId} where user_id=#{userId}
+	</update>
+	<select id="getUserById" parameterType="int" resultType="Admin">  
+        select user_id userId,
+        	   user_name userName,
+        	   user_password userPassword,
+        	   role_id roleId,
+        	   lastlogin_ip lashloginIp,
+        	   lastlogin_time lastloginTime,
+        	   user_email userEmail,
+        	   real_name realName,
+        	   user_status userStatus,
+        	   store_id storeId 
+        from admin 
+        where user_id=#{userId} 
+    </select>
+	<select id="getRoleList" parameterType="map" resultType="AdminRole">  
+        select role_id roleId,
+        	   role_name roleName,
+        	   user_description userDescription,
+        	   list_order listOrder,
+        	   user_disabled userDisabled,
+        	   role_modules roleModules,
+        	   role_columns roleColumns 
+        from admin_role
+    </select>
+	<!-- 
+	
+	final static String adminRole = "roleid,rolename,description,listorder,disabled,role_modules, role_columns";
+	
+	@SQL("select " + adminRole + " from admin_role where roleid = :1")
+	public AdminRole getRole(int roleid);
+	
+	@SQL("select " + adminRole + " from admin_role #if(:1 == 0){where roleid <> 1}")
+	public List<AdminRole> getRoleList(int superAdminAvaiable);
+	
+	@SQL("insert into admin_role(rolename,description,disabled)" +
+			"values(:1.rolename,:1.description,:1.disabled)")
+	public int addRole(AdminRole adminRole);
+	
+	@SQL("select count(*) from admin_role where rolename = :1")
+	public int checkRoleName(String rolename);
+	
+	@SQL("update admin_role set rolename=:1.rolename,description=:1.description,disabled=:1.disabled where roleid =:1.roleid")
+	public int updateRole(AdminRole role);
+	
+	@SQL("update admin_role set role_modules = :1.roleModules where roleid =:1.roleid")
+	public int updateRoleModule(AdminRole role);
+	
+	@SQL("delete from admin_role where roleid = :1")
+	public int deleteAdminRole(int roleid);
+	
+	@SQL("update admin_role set role_columns = :1.roleColumns where roleid =:1.roleid")
+	public int updateRoleColumn(AdminRole role);-->
+</mapper>  
