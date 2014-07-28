@@ -1,0 +1,20 @@
+html,body{margin:0;padding:0;height:100%;background:url(../images/admin/login_bg.jpg) repeat;font-size:12px;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.container{position:relative;height:100%;}
+.container-inner{position:absolute;left:50%;top:50%;width:380px;height:460px;margin:-230px -190px;}
+.login-title{margin-bottom:12px;vertical-align:bottom;text-align:center;}
+.login-box{width:350px;height:280px;margin:0 auto;padding-top:26px;background:url(../images/admin/login_box_bg.png) center center no-repeat;}
+.control-group{width:240px;margin:0 auto 16px auto;}
+.control-group label,.control-group input{vertical-align:middle;}
+.navbar-fixed-bottom{width:300px;margin:0 auto;color:#9a8471;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+.uname-ipt{width:200px;height:49px;line-height:49px;padding:0;padding-left:40px;border:none;background:url(../images/admin/uname_i.png) center center no-repeat;}
+.uname-ipt.focus{background:url(../images/admin/uname_i_v.png) center center no-repeat;}
+.upwd-ipt{width:200px;height:49px;line-height:49px;padding:0;padding-left:40px;border:none;background:url(../images/admin/upwd_i.png) center center no-repeat;}
+.upwd-ipt.focus{background:url(../images/admin/upwd_i_v.png) center center no-repeat;}
+.login-btn{width:240px;height:52px;border:none;background:url(../images/admin/login_btn.png) center center no-repeat;color:#fff;}
+.forget-pwd{margin-top:-18px;text-align:right;}
+.forget-pwd a{color:#006ac0;}
+.navbar-fixed-bottom .pull-left{padding-left:16px;background:url(../images/admin/login_h_link.png) 2px center no-repeat;*zoom:1;color:#9a8471;}
