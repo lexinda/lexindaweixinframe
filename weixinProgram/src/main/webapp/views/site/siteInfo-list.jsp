@@ -28,7 +28,7 @@
 	    <span class="search-filter">
 	      <label>内容标题:</label><input type="text" id="tName" name="tName" value="" maxlength="100" />
 	    </span>
-	    <button class="query-btn" type="submit" id="search"></button>
+	    <button class="query-btn" type="submit" id="search">查询</button>
 	</form>
   </div>
 </div>

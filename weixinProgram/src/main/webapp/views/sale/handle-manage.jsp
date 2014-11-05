@@ -45,7 +45,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
             <label>处理人员电话:</label>
             <input class="span2" type="text" name="handlePhone" value="${handlePhone}"/>    
           </span>
-        <button class="query-btn" type="submit" id="search">
+        <button class="query-btn" type="submit" id="search">查询
         </button>
       </form>
     </div>

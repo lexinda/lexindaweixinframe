@@ -68,7 +68,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
           </select>
         </span>
         
-        <button class="query-btn" type="submit" id="search" style="float: left;margin-top: 10px;">
+        <button class="query-btn" type="submit" id="search" style="float: left;margin-top: 10px;">查询
         </button>
         <div class="save-btn" style="width:80px;color: white;text-align: center;float: left;margin-top: 10px;margin-left: 20px;">
          	<a onclick="downloadExcel(${statusId},${page},${roleId},${bankType},${userId});" href="#" style="text-align: center;"><font color="white">下载Excel</font></a>

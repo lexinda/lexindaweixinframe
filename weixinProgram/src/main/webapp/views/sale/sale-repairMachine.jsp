@@ -64,7 +64,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
             	
           </select>
         </span>
-        <button class="query-btn" type="submit" id="search">
+        <button class="query-btn" type="submit" id="search">查询
         </button>
       </form>
     </div>
