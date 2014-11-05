@@ -38,7 +38,7 @@ body fieldset.blue legend{padding:3px 8px;font-weight:700;color:#347add; backgro
 
 .header .logo a{display:block;height:80px;text-decoration: none;}
 .header .rt-col{display:none;position:absolute;top:0px; right:0px; width:280px; height:44px; z-index:10}
-.header .lt-col{position:absolute;right:0;top:0;width:100%;height:71px;background:url(../images/admin/nav_r.png) right top no-repeat;}
+.header .lt-col{position:absolute;right:0;top:0;width:100%;height:71px;background:url(../images/admin/nav_r.png) right top repeat-x;}
 .header .nav{ display:block; height:31px;border-bottom:1px solid #b6b4b2;margin-bottom:0;position:absolute; bottom:0px;width:100%;padding-left:125px;background:url(../images/admin/nav_vbg.png) repeat-x;}
 .header .col-auto{overflow:visible;float:none}
 .header .nav li,
