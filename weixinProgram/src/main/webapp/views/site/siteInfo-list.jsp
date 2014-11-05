@@ -16,19 +16,19 @@
 <ul id="myTab" class="nav nav-tabs">
   <li class="active"><a href="infoList" data-toggle="tab">内容详情</a></li>
   <c:if test="${siteInfoType ==3}">
-   <li class=""><a href="/addNew?&siteInfoType=${siteInfoType}&">添加内容</a></li>
+   <li class=""><a href="/cmsRstManage/addNew?&siteInfoType=${siteInfoType}&">添加内容</a></li>
   </c:if>
    <c:if test="${siteInfoType ==2}">
-    <li class=""><a href="/addNew?&siteInfoType=${siteInfoType}&">添加内容</a></li>
+    <li class=""><a href="/cmsRstManage/addNew?&siteInfoType=${siteInfoType}&">添加内容</a></li>
   </c:if>
 </ul>
 <div class="toolbar">
   <div class="explain-col form-horizontal">
-  	<form action="/infoList" method="get">
+  	<form action="/cmsRstManage/infoList" method="get">
 	    <span class="search-filter">
 	      <label>内容标题:</label><input type="text" id="tName" name="tName" value="" maxlength="100" />
 	    </span>
-	    <button class="query-btn" type="submit" id="search">查询</button>
+	    <button class="query-btn" type="submit" id="search"></button>
 	</form>
   </div>
 </div>
@@ -52,8 +52,8 @@
 			</td>
 			<td>
 				<div class="btn-group">
-					<a class="modify-action" href="/showInfoDetail?tId=${site.id}">编辑</a>
-					<a class="delete-action" href="javascript:void(0);" data="/deleteInfo?tId=${site.id}&siteInfoType=${siteInfoType}">删除</a>
+					<a class="modify-action" href="/cmsRstManage/showInfoDetail?tId=${site.id}">编辑</a>
+					<a class="delete-action" href="javascript:void(0);" data="/cmsRstManage/deleteInfo?tId=${site.id}&siteInfoType=${siteInfoType}">删除</a>
 				</div>
 			</td>
 		</tr>
@@ -73,7 +73,7 @@
 	</c:if>
 </div>
 <div style="display:none">
-	<form id="updateContent" action="/infoList" method="get">
+	<form id="updateContent" action="/cmsRstManage/infoList" method="get">
 		<input type="hidden" name="page" value="${currentPage}">
 	</form>
 </div>

@@ -51,4 +51,10 @@
 		<!-- 配置获取access_token所需参数appid和appsecret -->
 		<load-on-startup>0</load-on-startup>
 	</servlet>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/erro_404</location>
+	</error-page>
+	
 </web-app>

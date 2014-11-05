@@ -33,7 +33,7 @@ input[type="text"]{ height:16px; font-size:12px; }
 			<div class="bk10"></div>
 			<div class="col-tab">
 				<div id="div_setting_1" class=" pad-10">
-					<form id="changePassword" class="form-horizontal" action="/mypanel/changePassword" method="post">
+					<form id="changePassword" class="form-horizontal" action="/cmsRstManage/mypanel/changePassword" method="post">
 						<dl class="dl-horizontal">
 							<dt class="dl-lbl">当前密码:</dt>
 						    <dd >

@@ -36,7 +36,7 @@ public class DashboardSessionFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         
         String servletPath = req.getServletPath();
-        if(servletPath.contains("login") ||servletPath.contains("site")||servletPath.contains("bank")||servletPath.contains("report") ||servletPath.contains(".jpg")  || servletPath.contains(".bmp") 
+        /*if(servletPath.contains("login") ||servletPath.contains("site")||servletPath.contains("bank")||servletPath.contains("report") ||servletPath.contains(".jpg")  || servletPath.contains(".bmp") 
                 || servletPath.contains("images") || servletPath.contains("css") || servletPath.contains("js") 
                ){
         	chain.doFilter(req, resp); 
@@ -55,7 +55,26 @@ public class DashboardSessionFilter implements Filter {
             	}else{
             		chain.doFilter(req, resp); 
             	}
-            }
+            }*/
+        if(servletPath.contains("cmsRstManage")){
+        	if(servletPath.equals("/cmsRstManage/login")){
+        		chain.doFilter(req, resp);
+        	}else if(req.getSession().getAttribute("user")==null){
+        		req.getSession().invalidate();
+        		request.setCharacterEncoding("UTF-8");
+                response.setContentType("UTF-8");
+                java.io.PrintWriter out = response.getWriter();
+        		out.println("<script>");
+        	    out.println("window.open('/cmsRstManage/login','_top');");
+        	    out.println("</script>"); 
+        	}else{
+        		chain.doFilter(req, resp); 
+        	}
+        	logger.debug("end:....");
+          }else{ 
+        	  logger.debug("end:....");
+        	  chain.doFilter(req, resp);
+          }
     }
 	public void init(FilterConfig arg0) throws ServletException {
 		// TODO Auto-generated method stub

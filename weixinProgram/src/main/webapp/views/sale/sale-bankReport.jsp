@@ -35,7 +35,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
   <div class="main-content">
     <div class="pad-10">
       <div class="toolbar explain-col form-horizontal">
-        <form action="/sale/bankReport" method="post">
+        <form action="/cmsRstManage/sale/bankReport" method="post">
         <input type="hidden" name="page" value="${page}"/> 
          	<input class="span2" type="hidden" name="roleId" id="roleId" value="${roleId}"/> 
          	<input class="span2" type="hidden" name="userId" id="userId" value="${userId}"/> 
@@ -68,8 +68,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
           </select>
         </span>
         
-        <button class="query-btn" type="submit" id="search" style="float: left;margin-top: 10px;"> 
-          查询
+        <button class="query-btn" type="submit" id="search" style="float: left;margin-top: 10px;">
         </button>
         <div class="save-btn" style="width:80px;color: white;text-align: center;float: left;margin-top: 10px;margin-left: 20px;">
          	<a onclick="downloadExcel(${statusId},${page},${roleId},${bankType},${userId});" href="#" style="text-align: center;"><font color="white">下载Excel</font></a>
@@ -183,7 +182,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
     </c:if>
   </div>
   <div style="display:nonoe">
-  <form id="repairMachine" action="/sale/repairMachine" method="post">
+  <form id="repairMachine" action="/cmsRstManage/sale/repairMachine" method="post">
     <input type="hidden" name="type" value="${type}">
     <input type="hidden" name="status" value="${status}">
     <input type="hidden" name="receiptName" value="${weixinBusiness.receiptName}">
@@ -225,7 +224,7 @@ $(".delete-action").live("click",function(e){
 
 function updateBusiness(value,id){
 	if(value==6||value==9){
-	window.top.art.dialog({title:'状态详情',id:'accessSetting',iframe:'/sale/reportContent?openId='+id+'&status='+value,width:'700',height:'500'});
+	window.top.art.dialog({title:'状态详情',id:'accessSetting',iframe:'/cmsRstManage/sale/reportContent?openId='+id+'&status='+value,width:'700',height:'500'});
 	}else{
 		$.ajax({
 				url:"/sale/reportOtherStatus",

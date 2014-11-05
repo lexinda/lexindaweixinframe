@@ -30,12 +30,25 @@ public class HomeController {
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String none(HttpServletRequest req,
             Model model){
-		int userId = UserUtils.getUserId(req);
-		if(userId <= 0){
-			return "login";
-		}else{
-			return "redirect:/index";
-		}
+		
+		return "maintain";
+		
+	}
+	
+	@RequestMapping(value="/erro_404",method=RequestMethod.GET)
+	public String erro_404(HttpServletRequest req,
+            Model model){
+		
+		return "mainerror";
+		
+	}
+	
+	@RequestMapping(value="/erro_404",method=RequestMethod.POST)
+	public String erro_405(HttpServletRequest req,
+            Model model){
+		
+		return "mainerror";
+		
 	}
 	
 	@RequestMapping(value="/cmsRstManage",method=RequestMethod.GET)
@@ -45,17 +58,17 @@ public class HomeController {
 		if(userId <= 0){
 			return "login";
 		}else{
-			return "redirect:/index";
+			return "redirect:/cmsRstManage/index";
 		}
 	}
 	
-	@RequestMapping(value="/login",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/login",method=RequestMethod.GET)
 	public String login(@RequestParam(value="error",required=false) String error,Model model){
 		model.addAttribute("error", error);
 		return "login";
 	}
 	
-	@RequestMapping(value="login",method=RequestMethod.POST)
+	@RequestMapping(value="/cmsRstManage/login",method=RequestMethod.POST)
 	public String login(@RequestParam("username") String username, 
 						@RequestParam("password") String password,
 						HttpServletRequest req,
@@ -63,11 +76,11 @@ public class HomeController {
         // json转为简单Bean  
         Admin admin = adminService.getUser(username, password);
 		if (admin == null){
-			return "redirect:/login?error=true";
+			return "redirect:/cmsRstManage/login?error=true";
 		} 
 		
 		if(admin.getUserStatus() == 0){
-			return "redirect:/login?error=true";
+			return "redirect:/cmsRstManage/login?error=true";
 		}
 		HttpSession userSession = req.getSession();
 		userSession.setAttribute("userId", admin.getUserId());
@@ -77,15 +90,15 @@ public class HomeController {
 		admin.setLastloginIp(ServletUtil.getClientRealIp(req));
 		admin.setLastloginTime(new Date());
 		adminService.updateUser(admin);
-		return "redirect:/index";
+		return "redirect:/cmsRstManage/index";
 	}
 	
-	@RequestMapping(value="/index",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/index",method=RequestMethod.GET)
     public String index() {
     	return "index";
     }
 	
-	@RequestMapping(value="/menu/mypanel",method=RequestMethod.GET)
+	@RequestMapping(value="/menu/cmsRstManage/mypanel",method=RequestMethod.GET)
     public String mypanel() {
     	return "menu/mypanel";
     }
@@ -100,19 +113,19 @@ public class HomeController {
 //    	return "menu/product-manage";
 //    }
 //	
-	@RequestMapping(value="/menu/access-m",method=RequestMethod.GET)
+	@RequestMapping(value="/menu/cmsRstManage/access-m",method=RequestMethod.GET)
     public String accessM() {
     	return "menu/access-manage";
     }
-	@RequestMapping(value="/menu/siteInfo-m",method=RequestMethod.GET)
+	@RequestMapping(value="/menu/cmsRstManage/siteInfo-m",method=RequestMethod.GET)
     public String siteInfoM() {
     	return "menu/siteInfo-manage";
     }
-	@RequestMapping(value="/menu/afterSale-m",method=RequestMethod.GET)
+	@RequestMapping(value="/menu/cmsRstManage/afterSale-m",method=RequestMethod.GET)
     public String afterSaleManager() {
     	return "menu/afterSale-manage";
     }
-	@RequestMapping(value="/menu/reportSale-m",method=RequestMethod.GET)
+	@RequestMapping(value="/menu/cmsRstManage/reportSale-m",method=RequestMethod.GET)
     public String reportSaleManager() {
     	return "menu/reportSale-manage";
     }
@@ -142,7 +155,7 @@ public class HomeController {
     public String logout(HttpServletRequest req,
             Model model) {
 		req.getSession().invalidate();
-    	return "redirect:/login";
+    	return "redirect:/cmsRstManage/login";
     }
 	
 //	@Get("menu/merchant-r")

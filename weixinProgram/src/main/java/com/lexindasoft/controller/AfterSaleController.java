@@ -42,6 +42,7 @@ import com.lexindasoft.lexindaframe.service.SiteInfoService;
 import com.lexindasoft.lexindaframe.util.Inputs;
 
 @Controller
+@RequestMapping(value = "/cmsRstManage")
 public class AfterSaleController {
 
 	private final Log logger = LogFactory.getLog(getClass());
@@ -524,7 +525,7 @@ public class AfterSaleController {
     	return "sale/handle-manage";
     }
 	
-	@RequestMapping(value="/sale/queryHandlePeople",method=RequestMethod.POST)
+	@RequestMapping(value="/cmsRstManage/sale/queryHandlePeople",method=RequestMethod.POST)
 	public String queryHandlePeople(@RequestParam(value="handlePeople",required=false) String handlePeople,
 			@RequestParam(value="handlePhone",required=false) String handlePhone,
 			@RequestParam("page") int page,

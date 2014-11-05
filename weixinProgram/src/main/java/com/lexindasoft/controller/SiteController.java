@@ -169,7 +169,7 @@ public class SiteController {
 		
     	return "site/siteDetail";
     }
-		@RequestMapping(value = "/infoList", method = RequestMethod.GET)
+		@RequestMapping(value = "/cmsRstManage/infoList", method = RequestMethod.GET)
 		public String getSiteInfoList(@RequestParam("siteInfoType") int siteInfoType,@RequestParam(value="page",required=false) Integer page,
 									@RequestParam(value="tName",required=false) String tName,
 									Model model){
@@ -204,7 +204,7 @@ public class SiteController {
 			return "site/siteInfo-list";
 		}
 		
-		@RequestMapping(value = "/deleteInfo", method = RequestMethod.GET)
+		@RequestMapping(value = "/cmsRstManage/deleteInfo", method = RequestMethod.GET)
 		public String deleteSiteInfo(@RequestParam("tId") int tId,@RequestParam("siteInfoType") int siteInfoType,Model model){
 			int result = siteInfoService.deleteSiteInfo(tId);
 			if(result>0){
@@ -215,7 +215,7 @@ public class SiteController {
 			return "redirect:/infoList?siteInfoType="+siteInfoType;
 		}
 		
-		@RequestMapping(value = "/showInfoDetail", method = RequestMethod.GET)
+		@RequestMapping(value = "/cmsRstManage/showInfoDetail", method = RequestMethod.GET)
 		public String showTechnicianDetail(@RequestParam("tId") int tId,Model model){
 			SiteInfo siteInfo= siteInfoService.showSiteInfoDetail(tId);
 			model.addAttribute("siteInfo", siteInfo);
@@ -223,13 +223,13 @@ public class SiteController {
 		}
 		
 		
-		@RequestMapping(value = "/addNew", method = RequestMethod.GET)
+		@RequestMapping(value = "/cmsRstManage/addNew", method = RequestMethod.GET)
 		public String addNewTechnician(@RequestParam("siteInfoType")int siteInfoType,Model model){
 			model.addAttribute("siteInfoType", siteInfoType);
 			return "site/siteInfo-add";
 		}
 		
-		@RequestMapping(value = "/addNew", method = RequestMethod.POST)
+		@RequestMapping(value = "/cmsRstManage/addNew", method = RequestMethod.POST)
 		public String addNewTechnician(@RequestParam("siteInfoType") int siteInfoType,
 				@RequestParam("tName") String tName,
 				@RequestParam("tSax") String tSax,
@@ -270,7 +270,7 @@ public class SiteController {
 			return "redirect:/infoList?siteInfoType="+siteInfoType;
 		}
 		
-		@RequestMapping(value = "/updateSiteInfo", method = RequestMethod.POST)
+		@RequestMapping(value = "/cmsRstManage/updateSiteInfo", method = RequestMethod.POST)
 		public String addNewTechnician(@RequestParam("id") int id,@RequestParam("siteInfoType") int siteInfoType,
 				@RequestParam("tName") String tName,
 				@RequestParam("tSax") String tSax,

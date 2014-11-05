@@ -6,12 +6,12 @@
 </h3>
 <ul>
 	<c:if test="${roleMap.user_manager == 1}">
-		<li class="sub_menu"><a href="/sale/bankReport?page=1&status=0&roleId=${roleMap.user_manager}&userId=${user.userId}&bankType=0&" hidefocus="true" style="outline: none;">报件管理</a></li>
+		<li class="sub_menu"><a href="/cmsRstManage/sale/bankReport?page=1&status=0&roleId=${roleMap.user_manager}&userId=${user.userId}&bankType=0&" hidefocus="true" style="outline: none;">报件管理</a></li>
 	</c:if>
 	<c:if test="${roleMap.user_manager == 3}">
-		<li class="sub_menu"><a href="/sale/bankReport?page=1&status=0&roleId=${roleMap.user_manager}&userId=${user.userId}&bankType=0&" hidefocus="true" style="outline: none;">报件管理</a></li>
+		<li class="sub_menu"><a href="/cmsRstManage/sale/bankReport?page=1&status=0&roleId=${roleMap.user_manager}&userId=${user.userId}&bankType=0&" hidefocus="true" style="outline: none;">报件管理</a></li>
 	</c:if>
 	<c:if test="${roleMap.user_manager == 4}">
-		<li class="sub_menu"><a href="/sale/bankReport?page=1&status=0&roleId=${roleMap.user_manager}&userId=${user.userId}&bankType=0&" hidefocus="true" style="outline: none;">报件管理</a></li>
+		<li class="sub_menu"><a href="/cmsRstManage/sale/bankReport?page=1&status=0&roleId=${roleMap.user_manager}&userId=${user.userId}&bankType=0&" hidefocus="true" style="outline: none;">报件管理</a></li>
 	</c:if>
 </ul>

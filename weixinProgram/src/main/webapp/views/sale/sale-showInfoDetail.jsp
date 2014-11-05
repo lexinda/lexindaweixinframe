@@ -31,7 +31,7 @@ input[type="text"] { height: 18px; font-size: 12px; }
 </head>
 <body>
   <ul class="nav nav-tabs">
-    <li><a href="/sale/repairMachine?page=${page}&type=${type}&status=${status}&receiptName=${receiptName}&"> <em>返回</em></a></li>
+    <li><a href="/cmsRstManage/sale/repairMachine?page=${page}&type=${type}&status=${status}&receiptName=${receiptName}&"> <em>返回</em></a></li>
     <li class="active"><a href="javascript:void(0);" class="on"> <em>详情</em></a></li>
   </ul>
 	<div class="main-content">
@@ -46,7 +46,7 @@ input[type="text"] { height: 18px; font-size: 12px; }
 					<li id="tab_setting_1" class="on">处理详情</li>
 				</ul>
 				<div id="div_setting_1" class="contentList pad-10">
-					<form id="updateStatusUser" class="form-horizontal" action="/sale/updateStatus" method="post">
+					<form id="updateStatusUser" class="form-horizontal" action="/cmsRstManage/sale/updateStatus" method="post">
 						<input type="hidden" id="id" name="id" value="${weixinBusinessData.id}" />
 						<input type="hidden" id="type" name="type" value="${type}" />
 						<input type="hidden" id="receiptName" name="receiptName" value="${receiptName}" />

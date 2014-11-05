@@ -151,7 +151,7 @@ public class UserController {
 		return "redirect:/user/admin/manage";
 	}
 	
-	@RequestMapping(value="/user/manage",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/user/manage",method=RequestMethod.GET)
 	public String userList(@RequestParam(value="page",required=false) int page,
 			HttpServletRequest req,
             Model model){
@@ -171,7 +171,7 @@ public class UserController {
 		return "user/user-manage";
 	}
 	
-	@RequestMapping(value="/user/searchlist",method=RequestMethod.POST)
+	@RequestMapping(value="/cmsRstManage/user/searchlist",method=RequestMethod.POST)
 	public String userSearchList(@RequestParam(value="userid",required=false) Integer userid,@RequestParam(value="username",required=false) String username,
 			@RequestParam(value="roleid",required=false) Integer roleid,@RequestParam("page") int page,HttpServletRequest req,
             Model model){
@@ -204,7 +204,7 @@ public class UserController {
 		return "user/user-manage";
 	}
 	
-	@RequestMapping(value="/user/add",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/user/add",method=RequestMethod.GET)
 	public String showUserAdd(@RequestParam(value="errorMSG",required=false) String errorMSG,HttpServletRequest req,
             Model model){
 		if(!StringUtils.isEmpty(errorMSG)){
@@ -217,7 +217,7 @@ public class UserController {
 		return "user/user-add";
 	}
 	
-	@RequestMapping(value="/user/add",method=RequestMethod.POST)
+	@RequestMapping(value="/cmsRstManage/user/add",method=RequestMethod.POST)
 	public String addUser(@RequestParam("username") String username, 
 			@RequestParam("password") String password,
 			@RequestParam("repassword") String repassword,
@@ -251,7 +251,7 @@ public class UserController {
 		return "redirect:/user/manage?page=1&";
 	}
 	
-	@RequestMapping(value="/user/edit",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/user/edit",method=RequestMethod.GET)
 	public String editUser(@RequestParam(value="errorMSG",required=false) String errorMSG,@RequestParam("uid") int userid,@RequestParam("page") int page,HttpServletRequest req,
             Model model) throws UnsupportedEncodingException{
 		Admin user = adminService.getUserById(userid);
@@ -268,14 +268,14 @@ public class UserController {
 		return "user/user-edit";
 	}
 	
-	@RequestMapping(value="/user/delete",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/user/delete",method=RequestMethod.GET)
 	public String delUser(@RequestParam("uid") int userid,@RequestParam("page") int page){
 		//@TODO 查看用户权限
 		adminService.delUser(userid);
 		return "redirect:/user/manage?page="+page+"&";
 	}
 	
-	@RequestMapping(value="/user/edit",method=RequestMethod.POST)
+	@RequestMapping(value="/cmsRstManage/user/edit",method=RequestMethod.POST)
 	public String editUserInfo(@RequestParam("userid") int userid,@RequestParam("username") String username, @RequestParam(value="password",required=false) String password,@RequestParam(value="repassword",required=false) String repassword,
 			@RequestParam(value="email",required=false) String email,@RequestParam(value="realname",required=false) String realname,@RequestParam("roleid") int roleid,@RequestParam("page") String page,HttpServletRequest req,
             Model model){
@@ -421,7 +421,7 @@ public class UserController {
 		AjaxUtils.printJson(map, resp);
 	}
 	
-	@RequestMapping(value="/user/enable",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/user/enable",method=RequestMethod.GET)
 	public String enableUser(@RequestParam("uid") int userid, @RequestParam("page") int page){
 		Admin user = adminService.getUserById(userid);
 		if(user != null){
@@ -436,7 +436,7 @@ public class UserController {
 		return "redirect:/user/manage?page="+page+"&";
 	}
 	
-	@RequestMapping(value="/user/disable",method=RequestMethod.GET)
+	@RequestMapping(value="/cmsRstManage/user/disable",method=RequestMethod.GET)
 	public String disableUser(@RequestParam("uid") int userid, @RequestParam("page") int page){
 		Admin user = adminService.getUserById(userid);
 		if(user != null){

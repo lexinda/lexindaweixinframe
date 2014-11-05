@@ -36,8 +36,8 @@ input.span2{width: 135px;}
 </head>
 <body>
 <ul id="myTab" class="nav nav-tabs">
-  <li class="active"><a href="infoList" data-toggle="tab">内容详情</a></li>
-  <li class=""><a href="infoList?siteInfoType=${siteInfo.siteInfoType}&">返回</a></li>
+  <li class="active"><a href="/cmsRstManage/infoList" data-toggle="tab">内容详情</a></li>
+  <li class=""><a href="/cmsRstManage/infoList?siteInfoType=${siteInfo.siteInfoType}&">返回</a></li>
 </ul>
 	<div class="main-content">
 		<div class="pad-10">
@@ -50,7 +50,7 @@ input.span2{width: 135px;}
 					<li id="tab_setting_1" class="on">基本信息</li>
 				</ul>
 				<div id="div_setting_1" class="contentList pad-10">
-					<form id="addTechnician" class="form-horizontal" action="/updateSiteInfo" method="post" enctype="multipart/form-data">
+					<form id="addTechnician" class="form-horizontal" action="/cmsRstManage/updateSiteInfo" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="id" id="id" value="${siteInfo.id}"/>
 					<input type="hidden" name="siteInfoType" id="siteInfoType" value="${siteInfo.siteInfoType}"/>
 					<input type="hidden" id="uploadImg" name="uploadImg" value="${siteInfo.siteInfoImg}"/>

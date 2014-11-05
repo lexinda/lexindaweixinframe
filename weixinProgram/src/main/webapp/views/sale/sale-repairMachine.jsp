@@ -35,7 +35,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
   <div class="main-content">
     <div class="pad-10">
       <div class="toolbar explain-col form-horizontal">
-        <form action="/sale/repairMachine" method="post">
+        <form action="/cmsRstManage/sale/repairMachine" method="post">
         <input type="hidden" name="page" value="${page}"/> 
          <input type="hidden" name="type" value="${type}"/>   
           <span class="search-filter">
@@ -64,8 +64,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
             	
           </select>
         </span>
-        <button class="query-btn" type="submit" id="search"> 
-          查询
+        <button class="query-btn" type="submit" id="search">
         </button>
       </form>
     </div>
@@ -144,7 +143,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
                   	</c:if>
                   	<c:if test="${weixinBusiness.status == 1}">
                   	</c:if> --%>
-                    <a class="delete-action" href="javascript:void(0);" data="/sale/deleteWeixinBusiness?id=${weixinBusiness.id}&type=${type}&status=${status}&page=${page}&receiptName=${receiptName}&"> 删除</a>
+                    <a class="delete-action" href="javascript:void(0);" data="/cmsRstManage/sale/deleteWeixinBusiness?id=${weixinBusiness.id}&type=${type}&status=${status}&page=${page}&receiptName=${receiptName}&"> 删除</a>
                   </div>
                 </div>
              </td>
@@ -166,7 +165,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
     </c:if>
   </div>
   <div style="display:nonoe">
-  <form id="repairMachine" action="/sale/repairMachine" method="post">
+  <form id="repairMachine" action="/cmsRstManage/sale/repairMachine" method="post">
     <input type="hidden" name="type" value="${type}">
     <input type="hidden" name="status" value="${status}">
     <input type="hidden" name="receiptName" value="${weixinBusiness.receiptName}">
@@ -194,7 +193,7 @@ $(".delete-action").live("click",function(e){
 
 function updateBusiness(value,id){
 	$.ajax({
-		url:"/sale/updateBusinessStatus",
+		url:"/cmsRstManage/sale/updateBusinessStatus",
 		type:"POST",
 		data:{id:id,handlePeopleId:value},
 		success:function(rsp){
@@ -205,10 +204,10 @@ function updateBusiness(value,id){
 
 function updateBusinessOther(value,id,type,status,page,receiptName){
 	if(value==1){
-		window.location.href='/sale/showInfoDetail?id='+id+'&type='+type+'&status='+status+'&page='+page+'&receiptName='+receiptName;
+		window.location.href='/cmsRstManage/sale/showInfoDetail?id='+id+'&type='+type+'&status='+status+'&page='+page+'&receiptName='+receiptName;
 		}else{
 			$.ajax({
-				url:"/sale/updateBusinessStatus",
+				url:"/cmsRstManage/sale/updateBusinessStatus",
 				type:"POST",
 				data:{id:id,handlePeopleId:value},
 				success:function(rsp){
@@ -219,7 +218,7 @@ function updateBusinessOther(value,id,type,status,page,receiptName){
 }
 
 function showInfoDetail(id,type,status,page,receiptName){
-	window.location.href='/sale/showInfoDetail?id='+id+'&type='+type+'&status='+status+'&page='+page+'&receiptName='+receiptName;
+	window.location.href='/cmsRstManage/sale/showInfoDetail?id='+id+'&type='+type+'&status='+status+'&page='+page+'&receiptName='+receiptName;
 }
 </script>
 </body>

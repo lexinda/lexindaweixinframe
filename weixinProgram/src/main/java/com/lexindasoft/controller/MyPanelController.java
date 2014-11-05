@@ -22,6 +22,7 @@ import com.lexindasoft.lexindaframe.util.Inputs;
 import com.lexindasoft.lexindaframe.util.UserUtils;
 
 @Controller
+@RequestMapping(value = "/cmsRstManage")
 public class MyPanelController {
 
 	private final Log logger = LogFactory.getLog(getClass());

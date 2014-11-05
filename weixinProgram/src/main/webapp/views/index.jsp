@@ -47,26 +47,26 @@
     		<!-- a href="?m=search" target="_blank" id="site_search">搜索</a -->
     	</div>
         <ul class="nav white" id="top_menu">
-			<li id="_M1" class="on top_menu" data="mypanel"><a href="javascript:void(0);" hidefocus="true" style="outline:none;">我的面板</a></li>
+			<li id="_M1" class="on top_menu" data="cmsRstManage/mypanel"><a href="javascript:void(0);" hidefocus="true" style="outline:none;">我的面板</a></li>
 			<c:if test="${roleMap.user_manager == 1}">
 			<li class="split"></li>
-			 <li id="_M5" class="top_menu" data="access-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">用户权限</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/access-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">用户权限</a></li>
 			 <li class="split"></li>
-			 <li id="_M5" class="top_menu" data="siteInfo-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">网站内容管理</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/siteInfo-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">网站内容管理</a></li>
 			 <li class="split"></li>
-			 <li id="_M5" class="top_menu" data="afterSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">售后服务</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/afterSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">售后服务</a></li>
 			  <li class="split"></li>
-			 <li id="_M5" class="top_menu" data="reportSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">报件管理</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/reportSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">报件管理</a></li>
 			</c:if>
 			<c:if test="${roleMap.user_manager == 2}">
 			 <li class="split"></li>
-			 <li id="_M5" class="top_menu" data="siteInfo-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">网站内容管理</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/siteInfo-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">网站内容管理</a></li>
 			 <li class="split"></li>
-			 <li id="_M5" class="top_menu" data="afterSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">售后服务</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/afterSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">售后服务</a></li>
 			</c:if>
 			<c:if test="${roleMap.user_manager == 3 || roleMap.user_manager == 4}">
 			 <li class="split"></li>
-			 <li id="_M5" class="top_menu" data="reportSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">报件管理</a></li>
+			 <li id="_M5" class="top_menu" data="cmsRstManage/reportSale-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">报件管理</a></li>
 			</c:if>
 			<!--<li class="split"></li>
 			 <li id="_M5" class="top_menu" data="access-m"><a href="javascript:void(0);"  hidefocus="true" style="outline:none;">用户权限</a></li>
@@ -114,7 +114,7 @@
     当前位置：<span id="current_pos">位置1 > 位置2 > 位置3 ></span></div>
     	<div class="col-1">
         	<div class="content" style="position:relative; overflow:hidden">
-                <iframe name="right" id="rightMain" src="/mypanel/info" frameborder="false" scrolling="auto" style="border:none; margin-bottom:30px" width="100%" height="auto" allowtransparency="true"></iframe>
+                <iframe name="right" id="rightMain" src="/cmsRstManage/mypanel/info" frameborder="false" scrolling="auto" style="border:none; margin-bottom:30px" width="100%" height="auto" allowtransparency="true"></iframe>
                 <!-- div class="fav-nav">
 					<div id="panellist">
 											</div>

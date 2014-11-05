@@ -52,7 +52,7 @@ input[type="text"] { height: 18px; font-size: 12px; }
 					<li id="tab_setting_1" class="on">基本信息</li>
 				</ul>
 				<div id="div_setting_1" class="contentList pad-10">
-					<form id="addAdminUser" class="form-horizontal" action="/sale/add" method="post">
+					<form id="addAdminUser" class="form-horizontal" action="/cmsRstManage/sale/add" method="post">
 						<div class="control-group">
 							<label class="control-label"><span class="required">*</span>名称:</label>
 							<div class="controls">

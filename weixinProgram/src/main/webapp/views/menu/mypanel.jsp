@@ -5,6 +5,6 @@
 	<span class="switchs cu on" title="展开与收缩"></span>管理员信息
 </h3>
 <ul>
-	<li class="sub_menu"><a href="/mypanel/info" hidefocus="true" style="outline: none;">账户管理</a></li>
-	<li class="sub_menu"><a href="/mypanel/changePassword" hidefocus="true" style="outline: none;">修改密码</a></li>
+	<li class="sub_menu"><a href="/cmsRstManage/mypanel/info" hidefocus="true" style="outline: none;">账户管理</a></li>
+	<li class="sub_menu"><a href="/cmsRstManage/mypanel/changePassword" hidefocus="true" style="outline: none;">修改密码</a></li>
 </ul>

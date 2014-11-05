@@ -30,12 +30,12 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
 <body>
   <ul class="nav nav-tabs">
     <li class="active"><a href="javascript:void(0);" class="on"> <em>用户管理</em></a></li>
-    <li><a id="addUser" href="/user/add"> <em>添加用户</em></a></li>
+    <li><a id="addUser" href="/cmsRstManage/user/add"> <em>添加用户</em></a></li>
   </ul>
   <div class="main-content">
     <div class="pad-10">
       <div class="toolbar explain-col form-horizontal">
-        <form action="/user/searchlist" method="post">
+        <form action="/cmsRstManage/user/searchlist" method="post">
         <input type="hidden" name="page" value="${page}"/>   
           <%-- <span class="search-filter">
             <label>用户ID:</label>
@@ -60,8 +60,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
               </c:forEach>
           </select>
         </span>
-        <button class="query-btn" type="submit" id="search"> 
-          查询
+        <button class="query-btn" type="submit" id="search">
         </button>
       </form>
     </div>
@@ -95,13 +94,13 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
                 <div class="btn-toolbar">
                   <div class="btn-group">
                   	<c:if test="${user.userStatus == 0}">
-                  	<a class="pass-action" href="/user/enable?uid=${user.userId}&page=${page}&">启用</a>
+                  	<a class="pass-action" href="/cmsRstManage/user/enable?uid=${user.userId}&page=${page}&">启用</a>
                   	</c:if>
                   	<c:if test="${user.userStatus == 1}">
-                  	<a class="ps-action" href="/user/disable?uid=${user.userId}&page=${page}&">禁用</a>
+                  	<a class="ps-action" href="/cmsRstManage/user/disable?uid=${user.userId}&page=${page}&">禁用</a>
                   	</c:if>
-                    <a class="modify-action" href="/user/edit?uid=${user.userId}&page=${page}&">修改</a>
-                    <a class="delete-action" href="javascript:void(0);" data="/user/delete?uid=${user.userId}&page=${page}&"> 删除</a>
+                    <a class="modify-action" href="/cmsRstManage/user/edit?uid=${user.userId}&page=${page}&">修改</a>
+                    <a class="delete-action" href="javascript:void(0);" data="/cmsRstManage/user/delete?uid=${user.userId}&page=${page}&"> 删除</a>
                   </div>
                 </div>
              </td>
@@ -123,7 +122,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
     </c:if>
   </div>
 <div style="display:nonoe">
-  <form id="userList" action="/user/searchlist" method="post">
+  <form id="userList" action="/cmsRstManage/user/searchlist" method="post">
     <input type="hidden" name="userid" value="${search.userId}">
     <input type="hidden" name="username" value="${search.userName}">
     <input type="hidden" name="roleid" value="${search.roleId}">

@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>乐信达运营后台管理系统</title>
+<title>上海融商网络科技有限公司后台管理系统</title>
 <link rel="stylesheet" href="/css/login.css"/>
 </head>
 <body class="site com_login view-login layout-default task- itemid- ">
@@ -23,25 +23,25 @@ window.top.location.href='/login';
       <div class="login-title"><img src="../images/admin/login_t.png" alt="meiliwan.com" /></div>
       <div id="system-message-container"> </div>
       <div class="login-box">
-	      <form id="loginForm" action="/login" method="post" name="myform">
+	      <form id="loginForm" action="/cmsRstManage/login" method="post" name="myform">
 	        <div class="control-group">
 	          <div class="controls">
 	            <div class="input-prepend input-append"> 
-	              <input name="username" id="username" tabindex="1" type="text" class="input-medium uname-ipt" placeholder="User Name" size="15"/>
+	              <input name="username" id="username" tabindex="1" type="text" class="input-medium uname-ipt" placeholder="用户名" size="15"/>
 	            </div>
 	          </div>
 	        </div>
 	        <div class="control-group">
 	          <div class="controls">
 	            <div class="input-prepend input-append"> 
-	              <input name="password" type="password" id="password" tabindex="2"class="input-medium upwd-ipt" placeholder="Password" size="15"/>
+	              <input name="password" type="password" id="password" tabindex="2"class="input-medium upwd-ipt" placeholder="密码" size="15"/>
 				 </div>
 	          </div>
 	        </div>
 	        <div class="control-group">
 	          <div class="controls">
 	            <div class="btn-group pull-left">
-	              <button id="login-submit" tabindex="3" class="login-btn"> <i class="icon-lock icon-white"></i> Log in</button>
+	              <button id="login-submit" tabindex="3" class="login-btn"> <i class="icon-lock icon-white"></i>登陆</button>
 	            </div>
 	          </div>
 	        </div>
@@ -53,7 +53,7 @@ window.top.location.href='/login';
     </noscript>
     <!-- End Content -->
     <div class="navbar navbar-fixed-bottom hidden-phone">
-	  <div >Copyright&copy;2014-2017，版权所有 www.lexindasoft.com</div>
+	  <div >Copyright&copy;2014-2017，版权所有：<a href="http://www.rstpay.com/">融商科技</a></div>
 	  <!-- <a href="${urlM}" class="pull-left" target="_blank"><i class="icon-share icon-white"></i>乐信达首页</a> -->
 	</div>
   </div>

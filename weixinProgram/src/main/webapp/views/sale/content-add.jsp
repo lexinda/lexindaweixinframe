@@ -46,7 +46,7 @@ input[type="text"] { height: 18px; font-size: 12px; }
 					<li id="tab_setting_1" class="on">基本信息</li>
 				</ul>
 				<div id="div_setting_1" class="contentList pad-10">
-					<form id="addAdminUser" class="form-horizontal" action="/sale/reportContent" method="post">
+					<form id="addAdminUser" class="form-horizontal" action="/cmsRstManage/sale/reportContent" method="post">
 						<input type="hidden" name="openId" value="${openId}"/>
 						<input type="hidden" name="status" value="${status}"/>
 						<div class="control-group">

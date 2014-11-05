@@ -30,12 +30,12 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
 <body>
   <ul class="nav nav-tabs">
     <li class="active"><a href="javascript:void(0);" class="on"> <em>售后处理人员管理</em></a></li>
-    <li><a id="addHandlePeople" href="/sale/add"> <em>添加售后处理人员</em></a></li>
+    <li><a id="addHandlePeople" href="/cmsRstManage/sale/add"> <em>添加售后处理人员</em></a></li>
   </ul>
   <div class="main-content">
     <div class="pad-10">
       <div class="toolbar explain-col form-horizontal">
-        <form action="/sale/queryHandlePeople" method="post">
+        <form action="/cmsRstManage/sale/queryHandlePeople" method="post">
         <input type="hidden" name="page" value="${page}"/> 
           <span class="search-filter">
             <label>处理人员姓名:</label>
@@ -45,8 +45,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
             <label>处理人员电话:</label>
             <input class="span2" type="text" name="handlePhone" value="${handlePhone}"/>    
           </span>
-        <button class="query-btn" type="submit" id="search"> 
-          查询
+        <button class="query-btn" type="submit" id="search">
         </button>
       </form>
     </div>
@@ -69,7 +68,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
               <td>
                 <div class="btn-toolbar">
                   <div class="btn-group">
-                    <a class="delete-action" href="javascript:void(0);" data="/sale/delete?id=${handlePeople.id}&page=${page}&"> 删除</a>
+                    <a class="delete-action" href="javascript:void(0);" data="/cmsRstManage/sale/delete?id=${handlePeople.id}&page=${page}&"> 删除</a>
                   </div>
                 </div>
              </td>
@@ -91,7 +90,7 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
     </c:if>
   </div>
   <div style="display:nonoe">
-  <form id="repairMachine" action="/sale/queryHandlePeople" method="post">
+  <form id="repairMachine" action="/cmsRstManage/sale/queryHandlePeople" method="post">
     <input type="hidden" name="handlePhone" value="${handlePhone}">
     <input type="hidden" name="handlePeople" value="${handlePeople}">
     <input type="hidden" name="page" value="${page}">
