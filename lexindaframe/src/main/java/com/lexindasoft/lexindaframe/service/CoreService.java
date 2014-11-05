@@ -69,8 +69,8 @@ public class CoreService {
                     Article article = new Article();  
                     article.setTitle("上海融商网络科技有限公司");  
                     article.setDescription("上海融商网络科技有限公司（简称“上海融商”）成立于2012年02月，是一家综合性支付服务代理企业，总部设立于上海。得益于成熟的收单市场经验、在全国金融中心的地理位置、信息畅通并与全国的主要第三方机构有着成熟的渠道合作关系...");  
-                    article.setPicUrl("http://law02.gotoip55.com/images/rongshang.jpg");  
-                    article.setUrl("http://law02.gotoip55.com/siteHome");  
+                    article.setPicUrl("http://www.rstpay.com/images/rongshang.jpg");  
+                    article.setUrl("http://www.rstpay.com/siteHome");  
                     articleList.add(article);  
                     // 设置图文消息个数  
                     newsRespMessage.setArticleCount(articleList.size());  
@@ -87,7 +87,7 @@ public class CoreService {
                     article.setDescription("上海融商网络科技有限公司（简称“上海融商”）成立于2012年02月，是一家综合性支付服务代理企业，总部设立于上海。得益于成熟的收单市场经验、在全国金融中心的地理位置、信息畅通并与全国的主要第三方机构有着成熟的渠道合作关系...");  
                     // 将图片置为空  
                     article.setPicUrl("");  
-                    article.setUrl("http://law02.gotoip55.com/siteHome");  
+                    article.setUrl("http://www.rstpay.com/siteHome");  
                     articleList.add(article);  
                     newsRespMessage.setArticleCount(articleList.size());  
                     newsRespMessage.setArticles(articleList);  
@@ -246,8 +246,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("上海融商网络科技有限公司");  
                         article.setDescription("上海融商网络科技有限公司（简称“上海融商”）成立于2012年02月，是一家综合性支付服务代理企业，总部设立于上海。得益于成熟的收单市场经验、在全国金融中心的地理位置、信息畅通并与全国的主要第三方机构有着成熟的渠道合作关系...【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/rongshang.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteHome");  
+                        article.setPicUrl("http://www.rstpay.com/images/rongshang.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteHome");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -270,8 +270,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("公司介绍");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/upload/2014/0614/pimg_PqZXSOjS1ini.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteDetail?id=19&");  
+                        article.setPicUrl("http://www.rstpay.com/images/upload/2014/0614/pimg_PqZXSOjS1ini.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteDetail?id=19&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -293,8 +293,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("招贤纳士");  
                         article.setDescription("上海融商网络科技有限公司（简称“上海融商”）成立于2012年02月，是一家综合性支付服务代理企业，总部设立于上海。得益于成熟的收单市场经验、在全国金融中心的地理位置、信息畅通并与全国的主要第三方机构有着成熟的渠道合作关系...【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/zhaoxiannashi.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteList?siteInfoType=3&");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/zhaoxiannashi.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteList?siteInfoType=3&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -316,8 +316,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("我的商户");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/merchant.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteMerchant");  
+                        article.setPicUrl("http://www.rstpay.com/images/merchant.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteMerchant");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -339,8 +339,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("联系我们");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/upload/2014/0616/pimg_schabw8Tas75.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteDetail?id=21&");  
+                        article.setPicUrl("http://www.rstpay.com/images/upload/2014/0616/pimg_schabw8Tas75.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteDetail?id=21&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -362,8 +362,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("产品介绍");  
                         article.setDescription("上海融商网络科技有限公司（简称“上海融商”）成立于2012年02月，是一家综合性支付服务代理企业，总部设立于上海。得益于成熟的收单市场经验、在全国金融中心的地理位置、信息畅通并与全国的主要第三方机构有着成熟的渠道合作关系...【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/chanpinjieshao.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteProduct");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/chanpinjieshao.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteProduct");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -385,8 +385,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("办理须知");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/banlixuzhi.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteDetail?id=28&");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/banlixuzhi.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteDetail?id=28&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -408,8 +408,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("机具申请");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/jiju.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteTestOauth?type=5&");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/jiju.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteTestOauth?type=5&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -431,8 +431,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("及时到账");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/top.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteTestOauth?type=4&");  
+                        article.setPicUrl("http://www.rstpay.com/images/top.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteTestOauth?type=4&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -454,8 +454,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("加盟融商");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/jiameng.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteDetail?id=29&");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/jiameng.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteDetail?id=29&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -477,8 +477,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("机具报修");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/jijubaoxiu.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteTestOauth?type=1&");  
+                        article.setPicUrl("http://www.rstpay.com/images/jijubaoxiu.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteTestOauth?type=1&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -500,8 +500,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("纸张申请");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/zhizhang.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteTestOauth?type=2&");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/zhizhang.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteTestOauth?type=2&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -523,8 +523,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("我要增机");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/weitu/jiju.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteTestOauth?type=3&");  
+                        article.setPicUrl("http://www.rstpay.com/images/weitu/jiju.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteTestOauth?type=3&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  
@@ -553,8 +553,8 @@ public class CoreService {
                         Article article = new Article();  
                         article.setTitle("常见问题");  
                         article.setDescription("【点击查看详情】");  
-                        article.setPicUrl("http://law02.gotoip55.com/images/upload/2014/0630/pimg_iNelVNj7z44J.jpg");  
-                        article.setUrl("http://law02.gotoip55.com/siteDetail?id=30&");  
+                        article.setPicUrl("http://www.rstpay.com/images/upload/2014/0630/pimg_iNelVNj7z44J.jpg");  
+                        article.setUrl("http://www.rstpay.com/siteDetail?id=30&");  
                         articleList.add(article);  
                             // 设置图文消息个数  
                         newsRespMessage.setArticleCount(articleList.size());  

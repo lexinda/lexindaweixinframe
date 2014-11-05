@@ -142,14 +142,14 @@ select, input[type="file"] { height: 28px; line-height: 30px; font-size: 12px; }
                   </c:if>
                   <c:if test="${roleId == 1 || roleId == 2}">
                   	<c:if test="${statusId ==0 }">
-	                  <select class="span2" name="status" onchange="updateBusiness(this.value,${report.openid});">
+	                  <select class="span2" name="status" onchange="updateBusiness(this.value,'${report.openid}');">
 	                 	 <c:forEach items="${statusList}" var="status">
 	                		<option value="${status.statusId}" <c:if test="${status.statusId == report.status}">selected</c:if>>${status.statusDesc}</option>
 	              		</c:forEach>
 	          		  </select>
 	          		 </c:if>
 	          		 <c:if test="${statusId !=0 }">
-	                  <select class="span2" name="status" onchange="updateBusiness(this.value,${report.openid});">
+	                  <select class="span2" name="status" onchange="updateBusiness(this.value,'${report.openid}');">
 	                 	 <c:forEach items="${statusList}" var="status">
 	                		<option value="${status.statusId}" <c:if test="${status.statusId == statusId}">selected</c:if>>${status.statusDesc}</option>
 	              		</c:forEach>

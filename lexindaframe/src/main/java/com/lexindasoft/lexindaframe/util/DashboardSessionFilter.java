@@ -40,14 +40,14 @@ public class DashboardSessionFilter implements Filter {
                 || servletPath.contains("images") || servletPath.contains("css") || servletPath.contains("js") 
                ){
         	chain.doFilter(req, resp); 
-        	logger.debug("end:...");
+        	logger.debug("end:....");
             }else{ 
             	if(req.getSession().getAttribute("user")==null){
             		req.getSession().invalidate();
             		request.setCharacterEncoding("UTF-8");
                     response.setContentType("UTF-8");
                     java.io.PrintWriter out = response.getWriter();
-            		out.println("<script>");   
+            		out.println("<script>");
             	    out.println("window.open('/login.jsp','_top');");
             	    out.println("</script>"); 
 //            	    RequestDispatcher requestDispatcher=request.getRequestDispatcher("/login.jsp"); 
@@ -55,7 +55,7 @@ public class DashboardSessionFilter implements Filter {
             	}else{
             		chain.doFilter(req, resp); 
             	}
-            } 
+            }
     }
 	public void init(FilterConfig arg0) throws ServletException {
 		// TODO Auto-generated method stub

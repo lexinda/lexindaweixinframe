@@ -38,6 +38,17 @@ public class HomeController {
 		}
 	}
 	
+	@RequestMapping(value="/cmsRstManage",method=RequestMethod.GET)
+	public String cmsRstManage(HttpServletRequest req,
+            Model model){
+		int userId = UserUtils.getUserId(req);
+		if(userId <= 0){
+			return "login";
+		}else{
+			return "redirect:/index";
+		}
+	}
+	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(@RequestParam(value="error",required=false) String error,Model model){
 		model.addAttribute("error", error);

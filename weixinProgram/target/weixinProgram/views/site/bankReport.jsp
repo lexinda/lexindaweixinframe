@@ -23,9 +23,9 @@
 				$("#provinceText").text("");
 				$("#cityText").text("");
 				$("#areaText").text("");
-				$("#machineText").text();
-				$("#rateText").text();
-				$("#depositText").text();
+				$("#machineText").text("");
+				$("#rateText").text("");
+				$("#depositText").text("");
 				var provinceName=$("#province").find("option:selected").text();
 				var cityName=$("#city").find("option:selected").text();
 				var areaName=$("#area").find("option:selected").text();
@@ -55,15 +55,42 @@
 						}else if($("#machine").val()==null||$("#machine").val()==""){
 							$("#machineText").text("机具型号不能为空！");
 							_scroll_to($("#machineText"));
-						}else if($("#rateName").val()!=null||$("#rateName").val()!=""){
+						}else if($("#rateName").val()!=null&&$("#rateName").val()!=""){
 							if(!rateNameCheck($("#rateName").val())){
 								$("#rateText").text("输入的费率格式有误，应为XXX%！");
 								_scroll_to($("#rateText"));	
+							}else if($("#deposit").val()!=null&&$("#deposit").val()!=""){
+								var a = $("#deposit").val();
+								if(!depositCheck($("#deposit").val())){
+									$("#depositText").text("押金应为整数！");
+									_scroll_to($("#depositText"));
+								}else{
+									$("#provinceName").val(provinceName);
+									$("#cityName").val(cityName);
+									$("#areaName").val(areaName);
+									$("#machineName").val($("#machine").val());
+									$("#submitBut").button("disable");
+									$("#formRepairMachine").submit();
+								}
+							}else{
+								$("#provinceName").val(provinceName);
+								$("#cityName").val(cityName);
+								$("#areaName").val(areaName);
+								$("#machineName").val($("#machine").val());
+								$("#submitBut").button("disable");
+								$("#formRepairMachine").submit();
 							}
 						}else if($("#deposit").val()!=null||$("#deposit").val()!=""){
 							if(!depositCheck($("#deposit").val())){
 								$("#depositText").text("押金应为整数！");
 								_scroll_to($("#depositText"));
+							}else{
+								$("#provinceName").val(provinceName);
+								$("#cityName").val(cityName);
+								$("#areaName").val(areaName);
+								$("#machineName").val($("#machine").val());
+								$("#submitBut").button("disable");
+								$("#formRepairMachine").submit();
 							}
 						}else{
 							$("#provinceName").val(provinceName);
@@ -88,11 +115,37 @@
 					if(!rateNameCheck($("#rateName").val())){
 						$("#rateText").text("输入的费率格式有误，应为XXX%！");
 						_scroll_to($("#rateText"));	
+					}else if($("#deposit").val()!=null||$("#deposit").val()!=""){
+						if(!depositCheck($("#deposit").val())){
+							$("#depositText").text("押金应为整数！");
+							_scroll_to($("#depositText"));
+						}else{
+							$("#provinceName").val(provinceName);
+							$("#cityName").val(cityName);
+							$("#areaName").val(areaName);
+							$("#machineName").val($("#machine").val());
+							$("#submitBut").button("disable");
+							$("#formRepairMachine").submit();
+						}
+					}else{
+						$("#provinceName").val(provinceName);
+						$("#cityName").val(cityName);
+						$("#areaName").val(areaName);
+						$("#machineName").val($("#machine").val());
+						$("#submitBut").button("disable");
+						$("#formRepairMachine").submit();
 					}
 				}else if($("#deposit").val()!=null||$("#deposit").val()!=""){
 					if(!depositCheck($("#deposit").val())){
 						$("#depositText").text("押金应为整数！");
 						_scroll_to($("#depositText"));
+					}else{
+						$("#provinceName").val(provinceName);
+						$("#cityName").val(cityName);
+						$("#areaName").val(areaName);
+						$("#machineName").val($("#machine").val());
+						$("#submitBut").button("disable");
+						$("#formRepairMachine").submit();
 					}
 				}else{
 					$("#provinceName").val(provinceName);
@@ -175,7 +228,7 @@
 	            }
 		}
 		function rateNameCheck(rateName){
-			var patten =/^[1-9]\d*\.\d*|0\.\d*[1-9]\d*+%$/;
+			var patten =/^[1-9]\d*\.\d{0,2}%$|0\.\d*[1-9]\d{0,2}%$/;
 			 if(patten.test(rateName)) 
 	           {
 	               return true;
@@ -318,7 +371,7 @@
     				 	</div>
 				  </div>
 				</form>
- 		   	 <a data-role="button" data-ajax="false" href="/getReportInfoList?openId=${resultUser.openid}&" data-icon="search" data-transition="slide" style="color:green;">报件记录</a>
+ 		   	 <a data-role="button" data-ajax="false" href="/sale/bankReportRecord?openId=${resultUser.openid}&" data-icon="search" data-transition="slide" style="color:green;">报件记录</a>
 	  </div>
 	
 	  <div data-role="footer">

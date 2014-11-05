@@ -22,18 +22,17 @@
             <ul id="list" data-role="listview" data-ajax="false">  
                 <c:forEach items="${reportInfoList}" var="list">
                      <li id="li${list.id}">
-							<h2>商户名称：${list.receiptName}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机型：${list.machineDesc}</h2>
-                     		<h3>状态：${list.statusDesc}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;处理时间：<fmt:formatDate pattern="yyyy-MM-dd  hh:mm:ss" value="${list.updateTime}" type="both"/>
-		    				</h3>
-		    				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		    				<c:if test="${content!=null ||content !=''}">
-    						备注：${content}
-    						</c:if>
-		    				</p>
-    						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<h2>商户名称：${list.merchantName}</h2>
+							<h2>机具类型：${list.machineDesc}</h2>
+                     		<h3>报件状态：${list.statusDesc}</h3>
+                     		<h3>操作时间：<fmt:formatDate pattern="yyyy-MM-dd  hh:mm:ss" value="${list.updateTime}" type="both"/></h3>
     						<h3>联系人：${list.userName}</h3>
     						<h3>联系电话：<a href="tel:${list.phone}">${list.phone}</a></h3>
-		    				</p>
+    						<p style="word-wrap:break-word;font-size: 16px;font-weight: bold;">
+		    				<c:if test="${list.content!=null}">
+    						备注：${list.content}
+    						</c:if>
+    						</p>
     				</li>  
                 </c:forEach>
             </ul>  
