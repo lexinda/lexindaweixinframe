@@ -676,7 +676,7 @@ public class SiteController {
 		    }
 		@RequestMapping(value="/siteTestOauth",method=RequestMethod.GET,produces = "application/json; charset=UTF-8")
 	    public String siteTestOauth(HttpServletRequest req,HttpServletResponse resp,@RequestParam("type") int type,Model model) { 
-			return "redirect:https://open.weixin.qq.com/connect/oauth2/authorize?appid="+RuntimeConfig.getInstance().getAppId()+ "&redirect_uri=http://law02.gotoip55.com/siteOauth?type="+type+"&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
+			return "redirect:https://open.weixin.qq.com/connect/oauth2/authorize?appid="+RuntimeConfig.getInstance().getAppId()+ "&redirect_uri=http://www.rstpay.com/siteOauth?type="+type+"&response_type=code&scope=snsapi_base&state=1#wechat_redirect";
 	    }
 		//oUZH8t65--vvBoQVHchyTRbktBnw
 		@RequestMapping(value="/siteRepairMachine",method=RequestMethod.GET,produces = "application/json; charset=UTF-8")
