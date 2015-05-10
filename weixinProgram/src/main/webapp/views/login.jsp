@@ -54,7 +54,7 @@ window.top.location.href='/login';
     <!-- End Content -->
     <div class="navbar navbar-fixed-bottom hidden-phone">
 	  <div >Copyright&copy;2014-2017，版权所有：<a href="http://www.rstpay.com/">融商科技</a></div>
-	  <!-- <a href="${urlM}" class="pull-left" target="_blank"><i class="icon-share icon-white"></i>乐信达首页</a> -->
+	  <!-- <a href="${urlM}" class="pull-left" target="_blank"><i class="icon-share icon-white"></i>上海融商网络科技有限公司首页</a> -->
 	</div>
   </div>
 </div>

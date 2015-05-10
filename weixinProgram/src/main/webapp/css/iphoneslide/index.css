@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* CSS Document */
+/*main product*/
+.main .product_pic {
+	width: 100%;
+	height: 640px;
+}
+.main .product_pic .lepos {
+	height: 640px;
+	width: 62%;
+	background: url(../../images/iphoneslide/lepos_new2.png) no-repeat right top;
+	background-color: #2680c6;
+}
+.main .product_pic .leshua {
+	background:#f2f2f2 url(../../images/iphoneslide/leshua_new.png) no-repeat center top;
+	width: 38%;
+	height: 290px;
+	background-color: #f2f2f2;
+	padding-top: 350px;
+}
+.main .product_pic .lepos .lepos_links {
+
+	top: 115px;
+	right: 90px;
+	line-height: 35px;
+	margin: 100px auto 0;
+	color: #fff;
+}
+.main .product_pic .lepos .lepos_links span{color:#fffc00;}
+.main .product_pic .lepos .lepos_links .color_pos { color: #b5d4ec; margin-bottom:30px; }
+.main .product_pic .lepos .lepos_links .lepos_btn{padding:17px 102px;background: url(../../images/iphoneslide/lepos_btn.png) no-repeat center top;*padding:28px 82px 0;}
+
+.main .ffbb00 { color: #ffbb00; }
+.main .color_leshua { color: #9a9a9a; }
+.main .product_pic .leshua .leshua_btn {padding:16px 102px;background: url(../../images/iphoneslide/leshua_btn.png) no-repeat center center;*padding:28px 82px 0;}
+/*login */
+.main .login_bg {
+/*	background: url(../../images/login_bg.jpg) repeat-x center center;*/
+	background-position:center center;
+	background-repeat:repeat-x;
+	height: 875px;
+}
+.main .login_bg .login {
+	margin: 0 auto;
+	float:center;
+	width: 720px;
+	height: 720px;
+	background: url(../../images/iphoneslide/phone1.png) no-repeat center bottom; 
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../../images/iphoneslide/phone1.png"); /*兼容ie6*/
+	_background:none;	
+	z-index:10;
+}
+.main .login_bg .login .login_slide{width:202px;height:386px;margin:249px 50px 0 40px;_margin:287px 50px 0 20px;}
+.main .login_bg .login .username {
+	position: relative;
+	top: 350px;
+
+}
+.main .login_bg .login .pwd {
+	position: relative;
+	top: 375px;
+
+}
+.main .login_bg .login .agent_no {
+	position: relative;
+	top: 395px;
+
+}
+.main .login_bg .login .agent_no .white { color: #000; text-decoration:underline;}
+.main .login_bg .login .btn_register {
+	position: relative;
+	top: 430px;
+
+}
+.main .login_bg .login input {
+	height: 40px;
+	border-radius: 6px;
+	border: 0;
+	padding: 0 20px;
+	line-height:40px\9;
+}
+.main .login_bg .login .input_username {
+	background-image: url(../../images/iphoneslide/login_icon.png);
+	background-repeat: no-repeat;
+	background-position: 320px -165px;
+	width: 320px;
+}
+.main .login_bg .login .input_pwd {
+	background-image: url(../../images/iphoneslide/login_icon.png);
+	background-repeat: no-repeat;
+	background-position: 320px -119px;
+	width: 320px;
+}
+.main .login_bg .login .agent_no .register { color: #fff;
+border:1px solid #fff;
+padding: 0 5px; }
+.main .login_bg .login .btn_register input {
+	background-color: #1276ce;
+	height: 44px;
+	width: 360px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 6px;
+	background-size: cover;
+	border: 0;
+	cursor: pointer;
+}
+.main .pos_show {/* background: url(../../images/pos_show.jpg) no-repeat center center; */ 
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+.main .pos_show { height: 666px; }
+.main .pos_show .ad_btn {
+	height: 50px;
+	width: 450px;
+	margin: 0 auto;
+	padding-top: 550px;
+}
+.main .ad_btn .show input {
+	float: left;
+	background: url(../../images/iphoneslide/apple_store.png) no-repeat center center;
+	height: 56px;
+	width: 220px;
+	cursor: pointer;
+}
+.main .ad_btn .publish input {
+	background: url(../../images/iphoneslide/android_store.png) no-repeat center center;
+	height: 56px;
+	width: 220px;
+	float: right;
+	cursor: pointer;
+}
+.main .benefit {
+	width: 1200px;
+	margin: 0px auto;
+	height: 180px;
+}
+.main .benefit ul li {
+	float: left;
+	height: 120px;
+	padding-left: 110px;
+	padding-top: 50px;
+	line-height: 20px;
+	width: 290px;
+
+}
+.main .benefit ul li h4 {
+	font-size: 20px;
+	color: #00c8d7;
+	margin-bottom: 15px;
+}
+.main .benefit ul .benefit_one { background: url(../../images/iphoneslide/icon1.png) no-repeat left center;
+ }
+.main .benefit ul .benefit_two { background: url(../../images/iphoneslide/icon2.png) no-repeat left center; 
+
+}
+.main .benefit ul .benefit_three {  background: url(../../images/iphoneslide/icon3.png) no-repeat left center;
+ }
+
+.main .leshua_maps {
+	height: 972px;
+/*	background: url(../../images/leshua_intro_new.jpg) center top;*/
+	background-position:center top;
+	background-repeat:no-repeat;
+
+}
+.main .leshua_words{margin:0 auto;left:-15px;width:520px;position:relative;padding:190px 0 0;}
+.main .leshua_maps .leshua_down {
+	width: 207px;
+	height: 48px;
+	margin: 0px auto 0;
+	position: relative;
+	left: -20px;
+}
+.main .leshua_maps .leshua_down input {
+	width: 207px;
+	height: 52px;
+	background: url(../../images/leshua_btn.png) center top;
+	border: 0;
+
+	cursor: pointer;
+}
+.main .leshua_maps .ad_btn {
+	height: 50px;
+	width: 450px;
+	margin: 0 auto;
+	margin-top: 500px;
+	position: relative;
+	left: -20px;
+}
+/*ibeacon*/
+.ibeacon_index{
+	height: 790px;
+	background:#fbfbfa url(../../images/iphoneslide/ibeacon_index.jpg) center 220px no-repeat;
+	
+	}
+/*icons_css*/
+.main .benefit_icon {
+	height: 527px;
+	background: #eeb61c;
+}
+.main .benefit_icon .benefit_title {
+	padding: 50px 0 0px;
+	text-align: center;
+	font-size: 36px;
+	color: #fff;
+}
+.main .benefit_icon .icons_detail ul {
+	width: 1100px;
+	margin: 0px auto;
+	height: 290px;
+	padding-top: 40px;
+}
+.main .benefit_icon .icons_detail ul li {
+	width: 94px;
+	height: 98px;
+	float: left;
+	margin: 15px 20px;
+	cursor: pointer;
+}
+.main .benefit_icon .icons_detail ul .icon_2 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center 0px; }
+.main .benefit_icon .icons_detail ul .icon_1 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -101px; }
+.main .benefit_icon .icons_detail ul .icon_3 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -202px; }
+.main .benefit_icon .icons_detail ul .icon_4 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -303px; }
+.main .benefit_icon .icons_detail ul .icon_5 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -404px; }
+.main .benefit_icon .icons_detail ul .icon_6 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -505px; }
+.main .benefit_icon .icons_detail ul .icon_7 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -606px; }
+.main .benefit_icon .icons_detail ul .icon_8 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -707px; }
+.main .benefit_icon .icons_detail ul .icon_9 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -808px; }
+.main .benefit_icon .icons_detail ul .icon_10 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -909px; }
+.main .benefit_icon .icons_detail ul .icon_11 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -1011px; }
+.main .benefit_icon .icons_detail ul .icon_12 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -1112px; }
+.main .benefit_icon .icons_detail ul .icon_13 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -1213px; }
+.main .benefit_icon .icons_detail ul .icon_14 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -1314px; }
+.main .benefit_icon .icons_detail ul .icon_15 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -1416px; }
+.main .benefit_icon .icons_detail ul .icon_16 { background: url(../../images/iphoneslide/app_icons.png) no-repeat center -1518px; }
+.main .benefit_icon .icons_detail ul .icon_2:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center 0px; }
+.main .benefit_icon .icons_detail ul .icon_1:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -101px; }
+.main .benefit_icon .icons_detail ul .icon_3:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -202px; }
+.main .benefit_icon .icons_detail ul .icon_4:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -303px; }
+.main .benefit_icon .icons_detail ul .icon_5:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -404px; }
+.main .benefit_icon .icons_detail ul .icon_6:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -505px; }
+.main .benefit_icon .icons_detail ul .icon_7:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -606px; }
+.main .benefit_icon .icons_detail ul .icon_8:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -707px; }
+.main .benefit_icon .icons_detail ul .icon_9:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -808px; }
+.main .benefit_icon .icons_detail ul .icon_10:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -909px; }
+.main .benefit_icon .icons_detail ul .icon_11:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -1011px; }
+.main .benefit_icon .icons_detail ul .icon_12:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -1112px; }
+.main .benefit_icon .icons_detail ul .icon_13:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -1213px; }
+.main .benefit_icon .icons_detail ul .icon_14:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -1314px; }
+.main .benefit_icon .icons_detail ul .icon_15:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -1416px; }
+.main .benefit_icon .icons_detail ul .icon_16:hover { background: url(../../images/iphoneslide/app_icons_hover.png) no-repeat center -1518px; }
+.main .benefit_icon .icon_tips {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	clear: both;
+}
+.main .benefit_icon .icon_tips .iddex_icon_tips {
+	font-size: 24px;
+	padding: 0 0 20px;
+}

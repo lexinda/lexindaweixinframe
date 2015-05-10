@@ -1,0 +1,33 @@
+@charset "utf-8";
+.divbox{ position: relative; margin: 0 auto;width:990px; height: 400px;overflow: hidden;}
+.slit ul li{ list-style: none}
+.slit #img_zc{position:absolute; top:330px; left: 20px;}
+.slit #img_dl{position:absolute; top:330px; left: 225px;}
+
+/* Div1 */
+.Div1{width:1000px;height:100px;margin:0 auto;overflow:hidden;position:relative;}
+
+.Div1_prev{padding:2px 10px 0 0;}
+.Div1_next{padding:2px 0 0 0px;}
+
+.Div1_main{padding-top:13px;height:80px;width:10000px;overflow:hidden;position:relative;z-index:1;}
+.Div1_main div{width:936px;height:80px;float:left; padding:0 32px}
+.Div1_main div span{padding:0 26px;width:80px;height:80px;display:block;float:left;}
+.Div1_main div span a{display:block;}
+.Div1_main_a1{padding:4px 3px 4px 4px;margin-bottom:4px;}
+.Div1_main_a1 , .Div1_main_a1 img{text-align:center}
+
+.Div1_main_a2{background:url(../../../images/templates/lizi_img009.jpg) no-repeat;width:77px;height:19px;color:#fff;text-align:center;line-height:19px;
+ margin-left:10px;}
+.Div1_main_a2:hover{background:url(../../../images/templates/lizi_img008.jpg) no-repeat;}
+
+.Div1_main div span.Div1_main_span1 .Div1_main_a1{background:url(../../../images/templates/lizi_img010.jpg) no-repeat;}
+
+.Div1 .Div1_prev1 ,.Div1 .Div1_next1{display:block;width:31px;height:30px;position:absolute;cursor:pointer;z-index:2;top:40px;}
+.Div1 .Div1_prev1 img ,.Div1 .Div1_next1 img{width:31px;height:30px;}
+.Div1 .Div1_prev1:hover ,.Div1 .Div1_next1:hover{opacity:0.7;.filter:alpha(opacity=70)}
+.Div1 .Div1_prev1{left:18px;}
+.Div1 .Div1_next1{left:954px;}
+
+
+

@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<title>乐信达运营后台管理系统</title>
+<title>上海融商网络科技有限公司运营后台管理系统</title>
 <link href="/css/reset.css" rel="stylesheet" type="text/css" />
 <link href="/css/g-system.css" rel="stylesheet" type="text/css" />
 <link href="/lib/artDialog/skins/dialog.css" rel="stylesheet" type="text/css" />
