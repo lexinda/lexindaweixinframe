@@ -111,4 +111,14 @@ public class SiteInfoServiceImpl implements SiteInfoService {
 		return siteInfoDao.findAllHandleByPeopleName(handlePeople);
 	}
 
+	public List<SiteInfo> findSiteNews(SiteInfo siteInfo) {
+		// TODO Auto-generated method stub
+		return siteInfoDao.findSiteNews(siteInfo);
+	}
+
+	public List<SiteInfo> findAllSiteNews() {
+		// TODO Auto-generated method stub
+		return siteInfoDao.findAllSiteNews();
+	}
+
 }
