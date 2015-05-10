@@ -40,4 +40,8 @@ public interface SiteInfoDao {
 	public List<HandlePeople> findHandleByPeopleName(HandlePeople handlePeople);
 	
 	public List<HandlePeople> findAllHandleByPeopleName(HandlePeople handlePeople);
+	
+	public List<SiteInfo> findSiteNews(SiteInfo siteInfo);
+	
+	public List<SiteInfo> findAllSiteNews();
 }
