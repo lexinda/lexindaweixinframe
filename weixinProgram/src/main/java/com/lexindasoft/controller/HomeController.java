@@ -1,6 +1,10 @@
 package com.lexindasoft.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -13,9 +17,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.lexindasoft.lexindaframe.model.Admin;
+import com.lexindasoft.lexindaframe.model.SiteInfo;
 import com.lexindasoft.lexindaframe.service.AdminService;
+import com.lexindasoft.lexindaframe.service.SiteInfoService;
 import com.lexindasoft.lexindaframe.util.ServletUtil;
 import com.lexindasoft.lexindaframe.util.UserUtils;
 
@@ -27,11 +34,28 @@ public class HomeController {
 	@Autowired
 	AdminService adminService;
 	
+	@Autowired
+	SiteInfoService siteInfoService;
+	
 	@RequestMapping(value="/",method=RequestMethod.GET)
-	public String none(HttpServletRequest req,
+	public ModelAndView none(HttpServletRequest req,
             Model model){
-		
-		return "maintain";
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("redirect:/index");
+		return mav;
+	}
+	
+	@RequestMapping(value="/index",method=RequestMethod.GET)
+	public String index(HttpServletRequest req,
+            Model model){
+		SiteInfo siteInfo = new SiteInfo();
+		siteInfo.setSiteInfoType(1);
+		siteInfo.setPageNum(0);
+		siteInfo.setPageSize(9);
+		siteInfo.setId(999999);
+		List<SiteInfo> newList = siteInfoService.findSiteNews(siteInfo);
+		model.addAttribute("newList", newList);
+		return "index/index";
 		
 	}
 	
@@ -162,6 +186,185 @@ public class HomeController {
     public String merchantR() {
     	return "menu/merchant-manage";
     }
+    
+    @RequestMapping("/news")
+	public ModelAndView news(@RequestParam(value="pageNumber",required=false)Integer pageNumber,Model model){
+		int pageSize=5;
+		ModelAndView mav = new ModelAndView();
+		int pageIndex = pageNumber==null?1:pageNumber;
+		int pageNum = (pageIndex-1)*pageSize;
+		SiteInfo siteInfo = new SiteInfo();
+		siteInfo.setPageNum(pageNum);
+		siteInfo.setPageSize(pageSize);
+		siteInfo.setId(999999);
+		List<SiteInfo> newList = siteInfoService.findSiteNews(siteInfo);
+		List<SiteInfo> newAllList = siteInfoService.findAllSiteNews();
+		int totalPage = (int)Math.ceil(newAllList.size() *1.0 / pageSize);
+		model.addAttribute("newList", newList);
+		model.addAttribute("totalPage", totalPage);
+		model.addAttribute("pageIndex", pageIndex);
+		mav.setViewName("index/index-new");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/newsDetail")
+	public ModelAndView newsDetail(@RequestParam(value="newsId",required=false)Integer newsId,Model model){
+		SiteInfo siteInfo = new SiteInfo();
+		siteInfo.setPageNum(0);
+		siteInfo.setPageSize(1);
+		siteInfo.setId(newsId);
+		List<SiteInfo> newList = siteInfoService.findSiteNews(siteInfo);
+		List<SiteInfo> newAllList = siteInfoService.findAllSiteNews();
+		SiteInfo preInfo = new SiteInfo();
+		SiteInfo nextInfo = new SiteInfo();
+		int index=0;
+		for(int i=0;i<newAllList.size();i++){
+			SiteInfo siteInfoOld = (SiteInfo)newList.get(0);
+			SiteInfo siteInfoCurrent = (SiteInfo)newAllList.get(0);
+			if(siteInfoOld.getId()==siteInfoCurrent.getId()){
+				index=i;
+			}
+		}
+		if(index-1>0&&index-1<newAllList.size()-1){
+			preInfo = newAllList.get(index-1);
+		}else{
+			preInfo.setId(999999);
+			preInfo.setSiteInfoName("没有了");
+		}
+		if(index+1<newAllList.size()){
+			nextInfo = newAllList.get(index+1);
+		}else{
+			nextInfo.setId(999999);
+			nextInfo.setSiteInfoName("没有了");
+		}
+		ModelAndView mav = new ModelAndView();
+		model.addAttribute("news", (SiteInfo)newList.get(0));
+		model.addAttribute("preInfo", preInfo);
+		model.addAttribute("nextInfo",nextInfo);
+		mav.setViewName("index/index-newdetail");
+		return mav;
+	}
+	
+	@RequestMapping("/rest")
+	public ModelAndView rest(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_rest");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/restDetail")
+	public ModelAndView restDetail(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_restDetail");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/restProduct")
+	public ModelAndView restProduct(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_restProduct");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/restUse")
+	public ModelAndView restUse(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_restUse");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/restApp")
+	public ModelAndView restApp(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_restApp");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/soft")
+	public ModelAndView soft(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_soft");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/product")
+	public ModelAndView product(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index_product");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/about")
+	public ModelAndView about(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index-about");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/hr")
+	public ModelAndView hr(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index-hr");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/contact")
+	public ModelAndView contact(){
+		
+		ModelAndView mav = new ModelAndView();
+		
+//		List<User> userList= userService.getAllUser();
+		
+		mav.setViewName("index/index-contact");
+		
+		return mav;
+	}
 	
 /*	
  * 去掉上传的功能 ，api文档不考虑上传 

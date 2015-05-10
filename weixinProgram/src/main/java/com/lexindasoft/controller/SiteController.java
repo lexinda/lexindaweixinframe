@@ -570,7 +570,7 @@ public class SiteController {
 			SimpleMailMessage smm = (SimpleMailMessage) actx.getBean("mailMessage");
 			// 主题,内容
 			smm.setSubject("你好，融商");
-			smm.setText("乐信达给您发的测试邮件，可以忽略！");
+			smm.setText("上海融商网络科技有限公司给您发的测试邮件，可以忽略！");
 			try{
 				ms.send(smm);
 				b=true;
