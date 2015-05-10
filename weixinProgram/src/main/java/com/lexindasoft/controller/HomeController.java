@@ -37,6 +37,7 @@ public class HomeController {
 	@Autowired
 	SiteInfoService siteInfoService;
 	
+	
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public ModelAndView none(HttpServletRequest req,
             Model model){
