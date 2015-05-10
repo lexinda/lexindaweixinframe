@@ -191,6 +191,33 @@
 	        		</if>
 	        	order by create_time desc limit #{pageSize},#{pageNum}
     </select>
+    <select id="findSiteNews" parameterType="SiteInfo" resultType="SiteInfo">  
+        select id,
+        	siteInfo_type as siteInfoType,
+	        siteInfo_name as siteInfoName,
+	        siteInfo_sax as siteInfoSax,
+	        siteInfo_img as siteInfoImg,
+	        siteInfo_content as siteInfoContent,
+	        create_time as createTime
+        from site_info 
+        where 1=1 and siteInfo_type = 1
+        <if test="id != 999999">
+        	and id = #{id}
+        </if> 
+        order by create_time desc limit #{pageNum},#{pageSize}
+    </select>
+    <select id="findAllSiteNews" resultType="SiteInfo">  
+        select id,
+        	siteInfo_type as siteInfoType,
+	        siteInfo_name as siteInfoName,
+	        siteInfo_sax as siteInfoSax,
+	        siteInfo_img as siteInfoImg,
+	        siteInfo_content as siteInfoContent,
+	        create_time as createTime
+        from site_info 
+        where 1=1 and siteInfo_type = 1
+        order by create_time desc
+    </select>
     <!--final static String RECORD  = "technician_name,technician_sax,technician_img,technician_content,create_time";
 	
 	final static String SELECTRECORD = "id as technicianId,technician_name as technicianName,technician_sax as technicianSax,technician_img as technicianImg,technician_content as technicianContent,create_time as createTime";
